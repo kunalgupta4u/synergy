@@ -1,0 +1,27 @@
+[10-Oct-2017 08:54:47 UTC] WordPress database error Unknown column 'wp_' in 'field list' for query SELECT wp_
+[10-Oct-2017 09:35:48 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:05 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:10 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:44 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:49 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:50 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 09:36:52 UTC] PHP Warning:  sprintf(): Too few arguments in /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/class-bulk-upgrader-skin.php on line 154
+[10-Oct-2017 10:19:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_url() on null in /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/includes/template.class.php:136
+Stack trace:
+#0 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/admin/revslider-admin.class.php(112): RevSliderTemplate->_get_template_list()
+#1 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#2 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/revslider.php(168): RevSliderAdmin->__construct('/home/kunal4u/p...')
+#3 /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/plugin.php(560): include_once('/home/kunal4u/p...')
+#4 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/themes/wp-fcgroup/inc/libs/class-tgm-plugin-activation.php(1042): activate_plugin('revslider/revsl...')
+#5 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/themes/wp-fcgroup/inc/libs/c in /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/includes/template.class.php on line 136
+[10-Oct-2017 10:21:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_url() on null in /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/includes/object-library.class.php:62
+Stack trace:
+#0 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/admin/revslider-admin.class.php(118): RevSliderObjectLibrary->_get_list()
+#1 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#2 /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/revslider.php(168): RevSliderAdmin->__construct('/home/kunal4u/p...')
+#3 /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/includes/plugin.php(560): include_once('/home/kunal4u/p...')
+#4 /home/kunal4u/public_html/liberatedit.com/synergy/wp-admin/plugins.php(42): activate_plugin('revslider/revsl...', 'http://www.libe...', false)
+#5 {main}
+  thrown in /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/revslider/includes/object-library.class.php on line 62
+[10-Oct-2017 10:37:59 UTC] PHP Warning:  file_get_contents(http://www.liberatedit.com/synergy/wp-content/themes/wp-fcgroup/inc/demo-data/elementy/maps_backup.json): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/kunal4u/public_html/liberatedit.com/synergy/wp-content/plugins/flex-map/core/mapAjaxHandler.php on line 467

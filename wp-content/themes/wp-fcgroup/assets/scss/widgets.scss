@@ -1,0 +1,595 @@
+/*--------------------------------------------------------------
+4.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin-bottom: 30px;
+	overflow: hidden;
+	&:after, &:before {
+		display: table;
+		content: '';
+	}
+	/*blog*/
+	&:last-child {
+		margin-bottom: 0;
+	}
+	/* > ul, > div > ul {
+		position: relative;
+		top: -5px;
+	} */
+
+	.wg-title {
+		color: $link_color;
+	    font-size: 16px;
+	    line-height: 1;
+	    text-transform: uppercase;
+	    margin: 0px;
+	    padding: 0 0 11px;
+	    position: relative;
+	    border-bottom: 1px solid #ddd;
+
+	    &:before {
+	    	content: '';
+			height: 3px;
+			width: 63px;
+			display: block;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			background-color: $primary_color;
+	    }
+	}
+
+	ul, ol {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		ul {
+			padding-left: 20px;
+		}
+	}
+
+	li {
+		margin-bottom: 14px;
+		font-weight: 400;
+		color: #777;
+	}
+
+	select {
+		width: 100%;
+		border: 1px solid #ddd;
+	    margin-top: 20px;
+	    padding: 6px 10px;
+	    cursor: pointer;
+
+	    option {
+	    	padding: 5px 10px;
+	    }
+	}
+
+	/* sidebar left */
+	.textwidget {
+		/* margin-top: 20px; */
+		font-size: 12px;
+		line-height: 20px;
+		.cms-button.cms-contact-sidebar {
+    		margin-top: 5px;
+		}
+	} 
+}
+
+.widget_nav_menu {
+    ul.sub-menu {
+    	padding: 0;
+        margin-left: 14px;
+    }
+}
+
+.widget_recent_entries, 
+.widget_archive, 
+.widget_categories,
+.widget_meta, .widget_pages,
+.widget_recent_entries, .widget_rss, .widget_nav_menu ,
+.widget_product_categories {
+	li {
+		margin-bottom: 0;
+
+		a {
+			padding: 15px 0 16px 20px;
+			display: inline-block;
+			position: relative;
+			background: url(../images/li-icon.png) no-repeat left 20px;
+			color: #777;
+			line-height: 20px;
+
+			&:hover, &:focus {
+				color: $link_color_hover; /* #51c5eb */
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				border-top: 1px solid #ddd;
+				position: absolute;
+				left: -5000%;
+				bottom: 0;
+				width: 100000%;
+			}
+		}
+	}
+}
+.widget_nav_menu {
+	.menu-typography-container {
+		margin-top: 2px;
+		ul.menu {
+			> li {
+				margin-bottom: 5.75px;
+			    margin-left: 0;
+			    /* margin-top: 2px; */
+
+				> a {
+					@include transition(background 0.3s ease-out 0s);
+				    background-color: #f3f3f3;
+				    background-image: none;
+				    border-color: $primary_color;
+				    border-image: none;
+				    border-radius: 0;
+				    border-style: none none none solid;
+				    border-width: 0 0 0 5px;
+				    color: #333;
+				    margin: 0;
+				    padding: 14px 18px;
+				    width: 100%;
+				    font-weight: 300;
+				    &:before {
+				    	content: none;
+				    }
+				    &:hover {
+					   @include  transition( all 0.2s ease 0s);
+					    color:$primary_color;
+					    cursor: pointer;
+				    }
+				}
+				&.current_page_item {
+					> a {
+						background-color: $primary_color;
+					    border-color: $link_color;
+					    color: #fff;
+					    cursor: pointer;
+					    outline: medium none;
+					    &:focus,
+					    &:active,
+					    &:hover {
+					    	background-color: $primary_color;
+						    border-color: $link_color;
+						    color: #fff;
+					    }
+					}
+				}
+			}
+		}
+		
+	}
+}
+.fcgroup-sidebar-wrap {
+	.widget_text h3 {
+		font-size: 16px;
+		margin:20px 0 12px;
+	}
+}
+/* Rss
+------------------------------*/
+.widget_rss {
+	ul {
+		li {
+			border-bottom: 1px solid #ddd;
+			padding: 16px 0 16px 0px;
+
+			a {
+				padding: 0px;
+				color: $link_color;
+
+				&.rsswidget {
+					background-position: left 5px;
+					&:first-letter {
+						padding-left: 20px;
+					}
+				}
+
+				&:hover {
+					color: $primary_color;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/* Recent Comment
+------------------------------*/
+.widget_recent_comments {
+	li {
+		padding: 16px 0 16px 20px;
+		display: inline-block;
+		background: url(../images/li-icon.png) no-repeat left 22px;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 0;
+	}
+}
+
+/* Search
+------------------------------*/
+/* .widget-area  */.widget_search {
+	.wg-title {
+		margin-bottom: 20px;
+	}
+
+	form {
+		background-color: #fff;
+		border: 1px solid #d4d4d4;
+	    height: 40px;
+	    padding: 6px 10px;
+	    width: 100%;
+	    position: relative;
+	}
+
+	input {
+		border: medium none;
+	    color: #999;
+	    float: left;
+	    height: 28px;
+	    line-height: 20px;
+	    padding: 0;
+	    width: 90%;
+	    font-size: 14px;
+	}
+
+	button {
+		height: 28px;
+		font-size: 20px;
+		padding: 0 0 0 10px;
+		border-left: 1px solid #d4d4d4;
+		border-right: none; 
+		border-top: none; 
+		border-bottom: none; 
+		background: 0 none;
+		color: $link_color;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		@include transform(translateY(-50%));
+
+		i {
+			display: block;
+		}
+	}
+}
+
+/* Tags
+------------------------------*/
+.widget_tag_cloud.widget {
+	margin-bottom: 25px;
+}
+.tagcloud {
+	margin-top: 20px;
+	
+	a {
+		background-color: #fff;
+	    color: #999;
+	    display: block;
+	    float: left;
+	    font-size: 12px !important;
+	    line-height: 30px;
+	    margin: 0 5px 5px 0;
+	    padding: 0 15px;
+	    text-decoration: none;
+
+	    &:hover {
+	    	color: #fff;
+	    	background: $primary_color;
+	    }
+	}
+}
+
+/* Calendar
+------------------------------*/
+.widget_calendar {
+	caption {
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+
+	thead th {
+		text-align: center;
+		padding: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	table, table td {
+		border-collapse: separate;
+		border-spacing: 1px;
+	}
+
+	table {
+		width: 100%;
+
+		tbody td {
+			text-align: center;
+		}
+	}
+
+	tfoot {
+		td {
+			border: none;
+		}
+	}
+
+	tbody {
+		.pad {
+			background: transparent;
+		}
+
+		td {
+			background: #ddd;
+			padding: 5px;
+			border: none;
+
+			&#today {
+				background: $primary_color;
+				color: #fff;
+			}
+		}
+
+		a {
+			font-weight: bold;
+		}
+	}
+}
+
+/* Newletter
+------------------------------*/
+.footer-bottom-wrap .widget_newsletterwidget {
+	margin-right: 60px;
+}
+.cms-newsletter-1 {
+	position: relative;
+
+	.newsletter-email {
+		font-size: 12px;
+		font-weight: 300;
+		padding: 6px 12px;
+		background-color: #fff;
+		line-height: 18px;
+		border: none;
+		width: 100%;
+		color: #000;
+		height: 40px;
+		line-height: 40px;
+		@include placeholder() {
+			color: #ccc;opacity: 1;
+		}
+	}
+
+	.newsletter-submit {
+		display: block;
+		width: 60px;
+		height: 40px;
+		line-height: 40px;
+		color: #fff;
+		background-color: $primary_color;
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 400;
+		text-align: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: none;
+		&:hover {
+			color: $link_color;
+		}
+	}
+}
+
+ul.address-wrap {
+	margin-top: 28px;
+
+	li {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.2;
+		margin-bottom: 12px;
+		color: inherit;
+
+		i {
+			font-size: 15px;
+			color: $primary_color;
+			margin-right: 8px;
+		}
+	}
+}
+.fcgroup-sidebar-wrap {
+	.widget_newsletterwidget {
+		.wg-title {
+			border-bottom: transparent;
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+.cms-newsletter-2 {
+	.subscribers-name,
+	.subscribers-email {
+	    @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
+	    box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	    height: 40px;
+	    width: 100%;
+	    padding: 6px 12px;
+	    margin:0 0 20px 0;
+	    border-color:#ccc;
+	    font-size: 14px;
+	    &:focus {
+	    	box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+	    	border-color:#66afe9;
+	    	outline: none;
+	    }
+	}
+}
+/* Twitter feeds
+------------------------------*/
+.twitter-home-widget {
+	position: relative;
+	top: -5px;
+
+	.item-child {
+		margin-bottom: 18px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.twitter-icon {
+			float: left;
+			font-size: 15px;
+			color: $primary_color;
+			line-height: 1;
+		    margin-right: 10px;
+		    position: relative;
+		    top: 4px;
+		}
+
+		.twitter-content {
+			.jtwt_tweet_text {
+				color: #c3c8cb;
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 300;
+				margin-bottom: 0;
+			}
+
+			a {
+				color: $primary_color;
+
+				&:hover, &:focus {
+					color: #c3c8cb;
+				}
+			}
+
+			.slider-reviews-autor {
+				color: #c3c8cb;
+				font-size: 10px;
+				line-height: 16px;
+				text-decoration: underline;
+				font-style: italic;
+				display: block;
+			}
+		}
+	}
+}
+
+/* Recen Post 
+-----------------------------*/
+.cms-recent-posts {
+	ul {
+		li.latest-post-item {
+			border-bottom: 1px solid #ddd;
+		    color: #777;
+		    font-size: 12px;
+		    padding: 20px 0;
+		    margin:0;
+		    .featured-wrap {
+		    	float: left;
+   	 			margin: 0 10px 10px 0;
+		    }
+		    .latest-item-info {
+		    	span {
+				    color: $link_color;
+				    display: block;
+				    font-size: 14px;
+				    text-transform: capitalize;
+			        line-height: 1;
+    				padding-top: 3px;
+				}
+				.entry-date {
+				    font-size: 10px;
+				    font-style: italic;
+				}
+		    }
+			.recent_content {
+				padding: 4px 0 1px;
+			}
+		    .readmore {
+		    	font-style: italic;
+		    	color: $link_color_hover;
+		    }
+		}
+	}
+}
+
+/*-----------------------
+	Widget Woocommerce
+-----------------------------*/
+
+/* Filter by price */
+.woocommerce{ 
+	&.widget_price_filter{
+		.price_slider_wrapper {
+			 margin-top: 25px;
+			.ui-widget-content {
+				background: $primary_color;
+				margin-bottom: 25px;
+			}
+		}
+		.ui-slider {
+			.ui-slider-range {
+				background: #333;
+			}
+			.ui-slider-handle {
+				border-radius: 0;
+				background: $primary_color;
+				top: -0.4em;
+			}
+		}
+		
+		.ui-slider-horizontal {
+			height: 1px;
+		}
+	}
+	//widget
+  	ul.cart_list, ul.product_list_widget{
+		li {
+			padding:15px 0 0;
+		}
+	}
+	.widget_shopping_cart {
+		ul.cart_list li {
+			padding-top: 15px;
+			a.remove {
+				top: 16px;
+			}
+		}
+		.total {
+			margin:15px 0;
+		}
+	}
+}
+.woo-product-list {
+	.widget_newsletterwidget {
+		form {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+
+@media screen and (max-width: 991px) {
+	.site-header {
+		position: relative;
+		z-index: 10;
+	}
+	.wpb_raw_html {
+		a {
+			margin-bottom: 5px;
+		}
+	}
+	.fcgroup-sidebar-wrap {
+		margin-top: 30px;
+	}
+	.footer-bottom-wrap {
+		.widget {
+			margin-bottom: 40px;
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed !important;
+	}
+}
+@media screen and (max-width: 767px) {
+	
+	.page-template-page-shortcode {
+		.widget_nav_menu {
+			margin-bottom: 30px;
+		}
+	}
+	.pricing-tables {
+		.site-main {
+			.entry-content {
+				.vc_row {
+					.vc_column-inner  {
+						.vc_column_container {
+							.vc_column-inner {
+								padding: 0 15px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
